@@ -1,5 +1,5 @@
 import unittest 
-from algo import calc
+from algo.math import calc
 
 class CalcTest(unittest.TestCase):
 	def test_add(self): 
