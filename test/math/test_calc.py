@@ -1,8 +1,7 @@
-import unittest 
+import pytest 
 from algo.math import calc
 
-class CalcTest(unittest.TestCase):
-	def test_add(self): 
-		result = calc.add( 10,5)
-		self.assertEqual(result, 15)
+def test_add(): 
+	result = calc.add( 10,5)
+	assert result == 15
 	

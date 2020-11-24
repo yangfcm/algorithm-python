@@ -15,3 +15,21 @@ def solution3(n):
 		b = fiboList[i-2]
 		fiboList.append(a+b)
 	return fiboList[n]
+
+def solution4(n):
+	if n < 2:
+		return n
+	f = doFib()
+	for i in range(2, n+1):
+		num = f()
+	return num
+
+def doFib():  
+    x1 = 0  
+    x2 = 1  
+    def get_next_number():  
+        nonlocal x1, x2  
+        x3 = x1 + x2  
+        x1, x2 = x2, x3  
+        return x3  
+    return get_next_number

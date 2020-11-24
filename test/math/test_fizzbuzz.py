@@ -1,27 +1,23 @@
-import contextlib
-import unittest 
+import pytest
 from algo.math import fizzbuzz
-from io import StringIO
 
-class FizzbuzzTest(unittest.TestCase):
-	def test_fizzbuzz_arg_5(self):
-		temp_stdout = StringIO()
-		with contextlib.redirect_stdout(temp_stdout):
-			fizzbuzz.solution(5)
-		output = temp_stdout.getvalue().strip()
-		expected_output = """1
+def test_fizzbuzz_with_number_5(capfd):
+    fizzbuzz.solution(5)
+    expected_output = """1
 2
 fizz
 4
-buzz"""
-		self.assertEqual(output, expected_output)
+buzz
+"""
+    out, err = capfd.readouterr()
+    assert out == expected_output
 
-	def test_fizzbuzz_arg_15(self):
-		temp_stdout = StringIO()
-		with contextlib.redirect_stdout(temp_stdout):
-			fizzbuzz.solution(15)
-		output = temp_stdout.getvalue().strip()
-		expected_output = """1
+
+
+
+def test_fizzbuzz_with_number_15(capfd):
+    fizzbuzz.solution(15)
+    expected_output = """1
 2
 fizz
 4
@@ -35,6 +31,8 @@ buzz
 fizz
 13
 14
-fizzbuzz"""
-		self.assertEqual(output, expected_output)
-	
+fizzbuzz
+"""
+    out, err = capfd.readouterr()
+    assert out == expected_output
+

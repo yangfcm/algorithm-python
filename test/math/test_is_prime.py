@@ -1,18 +1,21 @@
-import unittest 
+import pytest 
 from algo.math import is_prime
 
-class IsPrimeTest(unittest.TestCase):
-	def test_0_is_not_a_prime(self):
-		self.assertFalse(is_prime.solution(0))
-	def test_1_is_not_a_prime(self):
-		self.assertFalse(is_prime.solution(1))
-	def test_2_is_not_a_prime(self):
-		self.assertFalse(is_prime.solution(2))
-	def test_3_is_a_prime(self):
-		self.assertTrue(is_prime.solution(3))
-	def test_17_is_a_prime(self):
-		self.assertTrue(is_prime.solution(17))
-	def test_10000_is_not_a_prime(self):
-		self.assertFalse(is_prime.solution(10000))
+class TestIsPrime:
+	NotPrimeTestData = [
+		0,1,2,10000, 68, 99, 104731
+	]
+
+	IsPrimeTestData = [
+		3, 17, 8179, 104729 
+	]
+
+	@pytest.mark.parametrize("num", NotPrimeTestData)
+	def test_not_prime(self, num):
+		assert is_prime.solution(num) == False
+
+	@pytest.mark.parametrize("num", IsPrimeTestData)
+	def test_is_prime(self,num):
+		assert is_prime.solution(num) == True
 
 	
