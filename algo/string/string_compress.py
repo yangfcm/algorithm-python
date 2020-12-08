@@ -17,4 +17,4 @@ def solution(myStr):
       repeatChar = c
       repeatCharCnt = 1
   
-  return compressed if len(compressed) < len(myStr.strip()) else myStr
+  return compressed if len(compressed) < len(myStr.strip()) else myStr.strip()

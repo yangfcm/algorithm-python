@@ -2,4 +2,4 @@
 Validate a given string is palindrome
 '''
 def solution(str):
-  return str == str[::-1]
+  return str.lower() == str[::-1].lower()

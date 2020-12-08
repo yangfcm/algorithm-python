@@ -9,7 +9,7 @@ If the string is a permutation of a palindrome, it must have at most one charact
 def solution(str):
   charMap = {}
   for c in str.lower():
-    if c == ' ' 
+    if c == ' ': 
       continue
     charMap[c] = charMap.get(c, 0) + 1
   
