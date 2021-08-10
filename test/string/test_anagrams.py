@@ -9,7 +9,7 @@ class TestAnagrams:
 
   testFalseData = [
     ("One One", "Two two two"),
-    ("One one", "One one c")
+    ("One one", "One one cc")
   ]
 
   @pytest.mark.parametrize("str1, str2", testTrueData)
