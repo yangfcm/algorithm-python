@@ -10,15 +10,10 @@ Algorithms problems and solutions written in Python3, including test cases.
 
 ## How to run
 
-Under project root directory: `python -m unittest` and see the test outcome.<br>
-Or use verbose mode: `python -m unittest -v`
-
-## Use pytest
-
-- Install `pytest` by running:
+- Install `pytest`
 
 ```
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 - Run test cases:
