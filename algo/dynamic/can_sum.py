@@ -5,9 +5,6 @@
   You may use an element of the array as many times as needed.
   Assum numbers are all non-negative.
 '''
-from math import remainder
-
-
 def solution1(target, numbers):
   if target == 0: return True
   if target < 0: return False
