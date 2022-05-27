@@ -1,5 +1,5 @@
 import pytest
-from algo.dynamic import max_profit
+from algo.assorted import max_profit
 
 class TestMaxProfit:
   testData = [

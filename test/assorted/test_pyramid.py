@@ -1,5 +1,5 @@
 import pytest
-from algo.dynamic import pyramid
+from algo.assorted import pyramid
 
 
 def test_pyramid_with_number_2(capfd):

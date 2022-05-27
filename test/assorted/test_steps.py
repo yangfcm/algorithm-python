@@ -1,5 +1,5 @@
 import pytest
-from algo.dynamic import steps
+from algo.assorted import steps
 
 def test_steps_with_number_3(capfd):
   steps.solution(3)
