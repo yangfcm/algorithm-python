@@ -15,7 +15,7 @@ def solution2(m, n, memo={}):
   
   if m == 1 and n == 1: return 1
   if m == 0 or n == 0: return 0
-  memo[key] = solution2(m - 1, n) + solution2(m, n - 1)
+  memo[key] = solution2(m - 1, n, memo) + solution2(m, n - 1, memo)
   return memo[key]
 
 def solution3(m, n):
