@@ -5,6 +5,9 @@
  You may use an element of the array as many times as needed.
  Assum all input numbers are non-negative.
 '''
+from tkinter import N
+
+
 def solution1(target, numbers):
   if target == 0: return ()
   if target < 0: return None
@@ -16,8 +19,22 @@ def solution1(target, numbers):
       return remainderResult
   return None
 
-def solution2(target, numbers):
-  pass
+def solution2(target, numbers, memo = None):
+  if memo is None: memo = {}
+  if target in memo: return memo[target]
+  if target == 0: return ()
+  if target < 0: return None
+
+  for n in numbers:
+    remainder = target - n
+    remainderResult = solution2(remainder, numbers, memo)
+    if not remainderResult is None:
+      remainderResult += (n,)
+      memo[target] = remainderResult
+      return memo[target]
+  
+  memo[target] = None
+  return None
 
 def solution3(target, numbers):
   pass
