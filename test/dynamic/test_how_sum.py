@@ -2,7 +2,7 @@ import pytest
 
 from algo.dynamic import how_sum
 
-class TestCanSum:
+class TestHowSum:
 
   def test_solution1(self):
     assert how_sum.solution1(7, [2, 3]) == (3,2,2)
