@@ -37,4 +37,12 @@ def solution2(target, numbers, memo = None):
   return None
 
 def solution3(target, numbers):
-  pass
+  sum_arr = [None] * (target + 1)
+  sum_arr[0] = ()
+
+  for i in range(target):
+    if not sum_arr[i] is None:
+      for n in numbers:
+        if i + n <= target:
+          sum_arr[i+n] = sum_arr[i] + (n,)
+  return sum_arr[target]
