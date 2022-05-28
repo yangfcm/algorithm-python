@@ -30,12 +30,12 @@ def solution2(target, numbers, memo = None):
   return False
 
 def solution3(target, numbers):
-  canSumArr = [False] * (target + 1)
-  canSumArr[0] = True
+  sum_arr = [False] * (target + 1)
+  sum_arr[0] = True
 
   for i in range(target):
-    if canSumArr[i]:
+    if sum_arr[i]:
       for n in numbers:
         if i + n <= target:
-          canSumArr[i + n] = True
-  return canSumArr[target]
+          sum_arr[i + n] = True
+  return sum_arr[target]
