@@ -19,8 +19,23 @@ def solution1(target, numbers):
   return best
 
 
-def solution2(target, numbers):
-  pass
+def solution2(target, numbers, memo = None):
+  if memo is None: memo = {}
+  if target in memo: return memo[target]
+  if target == 0: return ()
+  if target < 0: return None
+  best = None
+  
+  for n in numbers:
+    remainder = target - n
+    remainderResult = solution2(remainder, numbers, memo)
+    if not remainderResult is None:
+      remainderResult += (n,)
+      if best is None or len(remainderResult) < len(best):
+        best = remainderResult
+  memo[target] = best
+  return best
+  
 
 def solution3(target, numbers):
   pass
