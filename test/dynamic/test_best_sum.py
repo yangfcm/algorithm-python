@@ -15,3 +15,10 @@ class TestBestSum:
     assert best_sum.solution2(7, [2, 4]) == None
     assert best_sum.solution2(8, [2, 3, 5, 6]) == (6,2)
     assert best_sum.solution2(100, [2, 4, 5, 10, 25, 50]) == (50, 50)
+    
+  def test_solution3(self):
+    assert best_sum.solution3(7, [2, 3]) == (2,2,3)
+    assert best_sum.solution3(7, [5, 3, 4, 7]) == (7,)
+    assert best_sum.solution3(7, [2, 4]) == None
+    assert best_sum.solution3(8, [2, 3, 5, 6]) == (2,6)
+    assert best_sum.solution3(100, [2, 4, 5, 10, 25, 50]) == (50, 50)
