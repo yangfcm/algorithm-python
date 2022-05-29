@@ -1,5 +1,5 @@
 '''
- Write a function canConstruct(target, strs) that accepts a target string and an array of strings.
+ Write a function can_construct(target, strs) that accepts a target string and an array of strings.
  The function should return a boolean indicating whether or not the target can be
  constructed by concatenating elements of the strs array.
  You may use elements in strs as many times as needed.
