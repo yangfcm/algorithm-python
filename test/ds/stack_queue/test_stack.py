@@ -15,7 +15,7 @@ class TestStack:
     assert s.size() == 3
     assert s.peek() == 3
 
-  def test_fifo(self):  # Test stack follows FIFO principles and relevant methods, like pop()
+  def test_lifo(self):  # Test stack follows LIFO principles and relevant methods, like pop()
     s = Stack()
     s.push(1)
     s.push(2)
