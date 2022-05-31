@@ -25,11 +25,11 @@ class AnimalQueue:
   # Add an animal, either cat or dog into the queue.
   def enqueue(self, animal):
     if animal == AnimalSpecies.DOG:
-      self.order += 1
       self.dogQueue.append(Animal(AnimalSpecies.DOG, self.order))
-    elif animal == AnimalSpecies.CAT:
       self.order += 1
-      self.dogQueue.append(Animal(AnimalSpecies.CAT, self.order))
+    elif animal == AnimalSpecies.CAT:
+      self.catQueue.append(Animal(AnimalSpecies.CAT, self.order))
+      self.order += 1
     else:
       raise Exception('Not dog or cat')
 
