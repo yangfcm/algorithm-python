@@ -1,10 +1,20 @@
 import pytest
 
-from collections import deque
 from algo.ds.stack_queue import get_min
+from algo.ds.stack_queue.stack import Stack
 
-def test_solution():
-  stack = deque([2, 5, 3, 0, -4, -1, 9, 1])
-  min = get_min.solution(stack)
+@pytest.fixture
+def stackFixture():
+  stack = Stack()
+  stack.push(3)
+  stack.push(-1)
+  stack.push(0)
+  stack.push(9)
+  stack.push(-4)
+  stack.push(2)
+  return stack
+
+def test_solution(stackFixture):
+  min = get_min.solution(stackFixture)
   assert min == -4
-  assert len(stack) == 8  # Assert the stack is intact.
+  assert stackFixture.size() == 6 # Assert the stack is intact.

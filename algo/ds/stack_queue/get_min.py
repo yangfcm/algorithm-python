@@ -2,17 +2,17 @@
  Given a stack. Find out its minimum number.
  (All elements in stack are number) 
 '''
-from collections import deque
+from algo.ds.stack_queue.stack import Stack
 
-def solution(stack = deque()):
-  tempStack = deque()
-  min = None
-  while len(stack) > 0:
-    item = stack.popleft()
+def solution(stack = Stack()):
+  tempStack = Stack()
+  min = stack.peek()
+  while stack.size() > 0:
+    item = stack.pop()
     if min is None or item < min:
       min = item
-    tempStack.appendleft(item)
+    tempStack.push(item)
   
-  while len(tempStack) > 0:
-    stack.appendleft(tempStack.popleft())
+  while tempStack.size() > 0:
+    stack.push(tempStack.pop())
   return min
