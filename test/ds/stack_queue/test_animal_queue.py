@@ -13,6 +13,7 @@ def animalQueue():
   return animalQueue
 
 def test_dequeue(animalQueue):
+  print(animalQueue.dogQueue.size(), animalQueue.catQueue.size())
   assert animalQueue.dequeue() == Animal(AnimalSpecies.CAT, 0)
   assert animalQueue.dequeue() == Animal(AnimalSpecies.DOG, 1)
   assert animalQueue.dequeue() == Animal(AnimalSpecies.DOG, 2)
