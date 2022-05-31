@@ -1,4 +1,3 @@
-from turtle import st
 import pytest
 
 from algo.ds.stack_queue.stack import Stack
