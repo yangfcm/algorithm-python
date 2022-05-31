@@ -1,5 +1,22 @@
-from algo.ds.stack_queue import AnimalQueue
+import pytest
 
-class TestAnimalQueue:
-  def test_solution_true(self):
-    assert 1 == 1
+from algo.ds.stack_queue.animal_queue import AnimalQueue, AnimalSpecies
+
+animalQueue = AnimalQueue()
+
+@pytest.fixture(autouse=True)
+def run_around_tests():
+  animalQueue.enqueue(AnimalSpecies.CAT)
+  animalQueue.enqueue(AnimalSpecies.DOG)
+  animalQueue.enqueue(AnimalSpecies.DOG)
+  animalQueue.enqueue(AnimalSpecies.DOG)
+  animalQueue.enqueue(AnimalSpecies.CAT)
+  animalQueue.enqueue(AnimalSpecies.CAT)
+  animalQueue.enqueue(AnimalSpecies.DOG)
+  yield
+
+def test_dequeue():
+  pass
+
+def test2():
+  pass
