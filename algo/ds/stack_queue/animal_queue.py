@@ -15,6 +15,9 @@ class Animal:
   def __init__(self, animal, order):
     self.animal = animal
     self.order = order
+  
+  def __eq__(self, other):
+    return self.__dict__ == other.__dict__ 
 
 class AnimalQueue:
   def __init__(self):
