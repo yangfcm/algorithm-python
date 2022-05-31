@@ -3,7 +3,7 @@ import pytest
 from collections import deque
 from algo.ds.stack_queue import get_min
 
-def test_solution_case1():
+def test_solution():
   stack = deque([2, 5, 3, 0, -4, -1, 9, 1])
   min = get_min.solution(stack)
   assert min == -4
