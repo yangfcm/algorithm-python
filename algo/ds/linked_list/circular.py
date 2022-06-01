@@ -18,7 +18,7 @@ def solution(list = LinkedList()):
   slow = list.getfirst()
   fast = list.getfirst()
 
-  while slow.next != None and fast.next.next != None:
+  while not fast.next is None and not fast.next.next is None:
     slow = slow.next
     fast = fast.next.next
     if slow == fast:
