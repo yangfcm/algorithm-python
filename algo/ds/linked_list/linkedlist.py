@@ -12,34 +12,64 @@ class LinkedList:
     self.__head__ = None
 
   def size(self):
-    pass
+    count = 0
+    node = self.__head__
+    while node != None:
+      count+=1
+      node = node.next
+    return count
 
   def clear(self):
     self.__head__ = None
 
   def getfirst(self):
-    pass
+    return None if self.size() == 0 else self.__head__
 
   def getlast(self):
-    pass
+    return None if self.size() == 0 else self.get(self.size() - 1)
 
-  def getat(self):
-    pass
+  def get(self, index): # Return the data at a particular position by index
+    if index < 0: raise Exception('Invalid value for in index')
+    if index >= self.size(): return None
+    node = self.__head__
+    for _ in range(index):
+      node = node.next
+    return node
+  
+  def insert(self, data, index):
+    if index < 0 or index > self.size(): raise Exception('Out of bound')
+    if(self.__head__ == None):
+      self.__head__ = Node(data)
+      return
+    
+    if index == 0:
+      self.__head__ = Node(data, self.__head__)
+      return
 
-  def insertfirst(self):
-    pass
+    previous = self.get(index - 1)
+    previous.next = Node(data, previous.next) 
 
-  def insertlast(self):
-    pass
+  def insertfirst(self, data):
+    self.insert(data, 0)
 
-  def insertat(self):
-    pass
+  def insertlast(self, data):
+    if self.size() == 0: 
+      self.insertfirst(data)
+      return
+    self.insert(data, self.size())
+
+  def remove(self, index):
+    if index < 0 or index >= self.size(): raise Exception('Out of bound')
+    if index == 0:
+      self.__head__ = self.__head__.next
+      return
+    
+    node = self.get(index)
+    previous = self.get(index - 1)
+    previous.next = node.next
 
   def removefirst(self):
-    pass
+    self.remove(0)
 
   def removelast(self):
-    pass
-  
-  def removeat(self):
-    pass
+    self.remove(self.size() - 1)
