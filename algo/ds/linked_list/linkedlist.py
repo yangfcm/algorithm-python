@@ -23,7 +23,7 @@ class LinkedList:
     self.__head__ = None
 
   def getfirst(self):
-    return None if self.size() == 0 else self.__head__
+    return self.__head__
 
   def getlast(self):
     return None if self.size() == 0 else self.get(self.size() - 1)

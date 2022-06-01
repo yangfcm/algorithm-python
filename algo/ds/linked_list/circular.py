@@ -14,7 +14,6 @@
 from algo.ds.linked_list.linkedlist import LinkedList
 
 def solution(list = LinkedList()):
-  if list.size() == 0: return False # For an empty linked list, think of as non-circular.
   slow = list.getfirst()
   fast = list.getfirst()
 
