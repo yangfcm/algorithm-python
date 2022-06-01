@@ -51,18 +51,27 @@ class StackSet:
     In this implementation, the sub-stack will be removed only when it gets empty.
   '''
   def popat(self, index):
-    pass
+    if index < 0: raise Exception('Invalid value for index.')
+    if self.size() <= index: return None
+    tempStacks = Stack()
+    for i in range(self.__stacks__.size() - index):
+      tempStacks.push(self.__stacks__.pop())
+    lastStack = tempStacks.peek()
+    elToPop = lastStack.pop()
+    if lastStack.isempty(): tempStacks.pop()
+    while tempStacks.size() > 0:
+      self.__stacks__.push(tempStacks.pop())
+    return elToPop
 
   def peek(self):
     if self.__stacks__.isempty(): return None
     return self.__stacks__.peek().peek()
 
-  def peekat(self, index):  # Peek the element of a stack with a given index.
+  def peekat(self, index):  # Peek the element of a particular stack with a given index.
     if index < 0: raise Exception('Invalid value for index.')
     if self.size() <= index: return None
     tempStacks = Stack()
     for i in range(self.__stacks__.size()-index):
-      print(i)
       tempStacks.push(self.__stacks__.pop())
     
     elToPeek = tempStacks.peek().peek()

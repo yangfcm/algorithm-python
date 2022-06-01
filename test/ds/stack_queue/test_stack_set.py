@@ -69,3 +69,14 @@ class TestStackSet:
     assert ss.peekat(1) == 6
     assert ss.peekat(2) == 7
     assert ss.peekat(3) == None
+  
+  def test_popat(self):
+    ss = self.populateData()
+    assert ss.popat(0) == 3
+    assert ss.size() == 3
+    assert ss.popat(0) == 2
+    assert ss.size() == 3
+    assert ss.popat(0) == 1
+    assert ss.size() == 2
+    assert ss.popat(0) == 6
+    assert ss.size() == 2
