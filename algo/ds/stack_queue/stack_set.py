@@ -50,15 +50,26 @@ class StackSet:
     the last) operate at full capacity. There's no "right answer" here; you could start a discussion about this trade-off
     In this implementation, the sub-stack will be removed only when it gets empty.
   '''
-  def popAt(self, index):
+  def popat(self, index):
     pass
 
   def peek(self):
     if self.__stacks__.isempty(): return None
     return self.__stacks__.peek().peek()
 
-  def peekAt(self, index):
-    pass
+  def peekat(self, index):  # Peek the element of a stack with a given index.
+    if index < 0: raise Exception('Invalid value for index.')
+    if self.size() <= index: return None
+    tempStacks = Stack()
+    for i in range(self.__stacks__.size()-index):
+      print(i)
+      tempStacks.push(self.__stacks__.pop())
+    
+    elToPeek = tempStacks.peek().peek()
+    while tempStacks.size() > 0:
+      self.__stacks__.push(tempStacks.pop())
+        
+    return elToPeek
 
   def size(self): # Returns how many stacks in the set, not how many elements in the stack set.
     return self.__stacks__.size()
