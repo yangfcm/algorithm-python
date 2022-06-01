@@ -11,20 +11,20 @@
  '''
 class Queue:
   def __init__(self):
-    self.__queue = []
+    self.__queue__ = []
   
   def add(self, data):
-    self.__queue.append(data)
+    self.__queue__.append(data)
 
   def remove(self):
-    return self.__queue.pop(0)
+    return self.__queue__.pop(0)
 
   def size(self):
-    return (len(self.__queue))
+    return (len(self.__queue__))
 
   def isempty(self):
     return self.size() == 0
 
   def peek(self):
     if self.isempty(): return None
-    return self.__queue[0]
+    return self.__queue__[0]
