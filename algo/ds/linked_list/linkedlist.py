@@ -69,7 +69,9 @@ class LinkedList:
     previous.next = node.next
 
   def removefirst(self):
+    if self.size() == 0: return
     self.remove(0)
 
   def removelast(self):
+    if self.size() == 0: return
     self.remove(self.size() - 1)

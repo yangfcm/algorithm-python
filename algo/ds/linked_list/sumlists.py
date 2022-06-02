@@ -11,5 +11,28 @@
 '''
 from algo.ds.linked_list.linkedlist import LinkedList
 
-def solution(list1 = LinkedList, list2 = LinkedList()):
-  pass
+def solution(list1 = LinkedList(), list2 = LinkedList()):
+  sumList = LinkedList()
+  list1Size = list1.size()
+  list2Size = list2.size()
+  maxSize = list1Size if list1Size > list2Size else list2Size
+
+  node1 = list1.getfirst()
+  node2 = list2.getfirst()
+
+  for i in range(maxSize):
+    digit1 = node1.data if node1 != None else 0
+    digit2 = node2.data if node2 != None else 0
+    
+    lastNode = sumList.getlast()
+    lastDigit = lastNode.data if lastNode != None else 0
+    sumList.removelast()
+    
+    digitSum = digit1 + digit2 + lastDigit
+    sumList.insertlast(digitSum % 10)
+    sumList.insertlast(digitSum // 10)
+
+    if node1 != None: node1 = node1.next
+    if node2 != None: node2 = node2.next
+  
+  return sumList
