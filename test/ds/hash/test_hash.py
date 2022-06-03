@@ -5,11 +5,11 @@ from algo.ds.hash.hash import HashTable
 class TestHashTable:
   def test_init(self):
     t = HashTable()
-    assert t.count == 0
-    assert t.size == 8
+    assert t.count() == 0
+    assert t.size() == 8
 
     t = HashTable(10) # Specify my own size.
-    assert t.size == 10
+    assert t.size() == 10
 
   def test_put_get(self):
     t = HashTable()
@@ -38,9 +38,9 @@ class TestHashTable:
   def test_resize_expansion(self):
     t = HashTable(2)
     t.put('a', 1)
-    assert t.size == 2
+    assert t.size() == 2
     t.put('b', 2) # Now resize to 4.
-    assert t.size == 4
+    assert t.size() == 4
     t.put('c', 3)
     assert t.get('a') == 1
     assert t.get('b') == 2
@@ -48,7 +48,6 @@ class TestHashTable:
 
     t.remove('a')
     t.remove('b')
-    print(t.count)
-    assert t.size == 4
+    assert t.size() == 4
     t.remove('c') # Now resize to 2.
-    assert t.size == 2
+    assert t.size() == 2
