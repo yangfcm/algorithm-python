@@ -4,6 +4,10 @@
   
   You may use an element of the array as many times as needed.
   Assum numbers are all non-negative.
+  Example: 
+    target = 7, numbers = [2, 3] -> true (2 + 2 + 3 = 7)
+    target = 7, numbers = [5, 3, 4, 7] -> true (7 = 7) or (3 + 4 = 7)
+    target = 7, numbers = [2, 4] -> false
 '''
 def solution1(target, numbers):
   if target == 0: return True

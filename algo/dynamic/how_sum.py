@@ -1,9 +1,13 @@
 '''
- Write a function how_sum(target, numbers) that takes in a target sum and an array of numbers as arguments
- The function should return an tuple containing any (one) combination of elements that add up to exactly the target sum.
- If there is no combination that adds up to the target sum, return None.
- You may use an element of the tuple as many times as needed.
- Assum all input numbers are non-negative.
+  Write a function how_sum(target, numbers) that takes in a target sum and an array of numbers as arguments
+  The function should return an tuple containing any (one) combination of elements that add up to exactly the target sum.
+  If there is no combination that adds up to the target sum, return None.
+  You may use an element of the tuple as many times as needed.
+  Assum all input numbers are non-negative.
+  Example:
+    target = 7, numbers = [2, 3] ->[2, 3, 2]
+    target = 7, numbers = [5, 3, 4, 7] -> [4, 3] Although [7] is also the answer but we just need one.
+    target = 7, numbers = [2, 4] -> null
 '''
 def solution1(target, numbers):
   if target == 0: return ()

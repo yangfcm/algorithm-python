@@ -1,9 +1,9 @@
 import math as m
 
-def solution(n):
-	"""
+"""
 	Return true or false, indicating whether a given number n is a prime
-	"""
+"""
+def solution(n):
 	if n < 2:
 		return False;
 	maxDivisor = m.ceil(m.sqrt(n))

@@ -4,6 +4,9 @@
   If there is more than one shortest combinations, return any one of them.
   You may use an element of the tuple as many times as needed.
   Assum all input numbers are non-negative.
+  Example
+    target = 7, numbers = [2, 3] ->[2, 3, 2]
+    target = 7, numbers = [5, 3, 4, 7] -> [7] There are two possible combinations: [3, 4] and [7] but [7] has only one element, which is the answer.
 '''
 def solution1(target, numbers):
   if target == 0: return ()

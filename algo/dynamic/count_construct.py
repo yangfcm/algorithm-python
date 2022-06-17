@@ -1,9 +1,11 @@
 '''
- Write a function count_construct(target, strs) that accepts a target string and an array of strings.
- The function should return the number of ways that the target can be
- constructed by concatenating elements of the strs array.
- You may use elements in strs as many times as needed.
- e.g. count_construct('purple', ['purp', 'p', 'ur', 'le', 'purpl' ]) -> 2 i.e. 'purp' + 'le', 'p'+'ur'+'p'+'le'
+  Write a function count_construct(target, strs) that accepts a target string and an array of strings.
+  The function should return the number of ways that the target can be
+  constructed by concatenating elements of the strs array.
+  You may use elements in strs as many times as needed.
+  Example:
+    target = 'purple', strs = ['purp', 'p', 'ur', 'le', 'purpl' ]) -> 2
+    There are two ways of constructing purple: 'purp' + 'le', 'p'+'ur'+'p'+'le', so 2 is our answer.
 '''
 def solution1(target, strs):
   if target == '': return 1
