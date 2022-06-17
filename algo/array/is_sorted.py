@@ -1,4 +1,6 @@
-#	Return true or false, indicating whether a given array of numbers is sorted
+'''
+  Given an array of numbers, return true or false, indicating whether the array is sorted.
+'''
 def solution(arr):
   if len(arr) == 0:
     return true

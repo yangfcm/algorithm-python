@@ -12,4 +12,5 @@ class TestRemoveDuplicates:
 
   @pytest.mark.parametrize("arr, expected", testData)
   def test_solution(self, arr, expected):
-    assert remove_duplicates.solution(arr) == expected
+    assert remove_duplicates.solution(arr) == len(expected)
+    assert arr == expected 

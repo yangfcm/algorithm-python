@@ -10,4 +10,5 @@ class TestMovingZeroes:
 
   @pytest.mark.parametrize("arr, expected", testData)
   def test_solution(self, arr, expected):
-    assert moving_zeroes.solution(arr) == expected
+    moving_zeroes.solution(arr)
+    assert(arr) == expected

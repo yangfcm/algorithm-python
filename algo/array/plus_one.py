@@ -1,7 +1,9 @@
-# Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
-# 	 e.g. Input: [1,2,3]
-# 	 Output: [1,2,4]
-# 	 Explanation: The array represents the integer 123
+'''
+  Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+  Example: plusOne([1,2,3]) -> [1,2,4]
+  plusOne([1, 9, 9]) -> [2, 0, 0]
+  plusOne([9, 9, 9]) -> [1, 0, 0, 0]
+'''
 def solution(digits):
   for i in range(len(digits)-1, -1, -1):
     if digits[i] < 9:

@@ -1,21 +1,21 @@
-	# Write a function that accepts an integer n 
-	# and returns a N x N spiral matrix. (What is spiral matrix, see the example below)
-	# 		e.g. 
-	# matrix(2)
-	# 		[[1, 2],
-	# 		[4, 3]]
-	# matrix(3)
-	# 		[[1, 2, 3],
-	# 		[8, 9, 4],
-	# 		[7, 6, 5]]
-	# matrix(4)
-	# 		[[1,   2,  3, 4],
-	# 		[12, 13, 14, 5],
-	# 		[11, 16, 15, 6],
-	# 		[10,  9,  8, 7]]
+'''
+  Write a function that accepts an integer n and returns a N x N spiral matrix.
+  Example: 
+  matrix(2)
+    [[1, 2],
+    [4, 3]]
+  matrix(3)
+    [[1, 2, 3],
+    [8, 9, 4],
+    [7, 6, 5]]
+  matrix(4)
+    [[1,   2,  3, 4],
+    [12, 13, 14, 5],
+    [11, 16, 15, 6],
+    [10,  9,  8, 7]]
+'''
 
 def solution(n):
-  # matrix = [[0]*n]*n # initialize n*n array
   matrix = [[0]*n for _ in range(n)] 
   startRow = 0
   startCol = 0
