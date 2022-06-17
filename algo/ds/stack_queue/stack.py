@@ -2,11 +2,11 @@
   Stack: A data structure with Last-In-First-Out
   Create a stack data structure and implement its methods like 'add', 'remove', 'peek' and 'empty'
   Example:
-  const s = Stack();
-  s.push(1);
-  s.push(2);
-  s.pop();  // returns 2
-  s.pop();  // returns 1
+    const s = Stack();
+    s.push(1);
+    s.push(2);
+    s.pop();  // returns 2
+    s.pop();  // returns 1
 '''
 
 class Stack:

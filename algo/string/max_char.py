@@ -1,5 +1,5 @@
 '''
-Give a string, return the character that is most commonly used in the string
+  Give a string, return the character that is most commonly used in the string
 '''
 def solution(str):
   strMap = {} 

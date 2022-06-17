@@ -1,6 +1,6 @@
 '''
   Given a linked list and integer n, return the element n spaces from the last node in the list.
-  Example
+  Example:
     list = new LinkedList();
     list.insertlast('a');
     list.insertlast('b');

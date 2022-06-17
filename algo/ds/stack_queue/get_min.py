@@ -1,6 +1,6 @@
 '''
- Given a stack. Find out its minimum number.
- (All elements in stack are number) 
+  Given a stack. Find out its minimum number.
+  (All elements in stack are number) 
 '''
 from algo.ds.stack_queue.stack import Stack
 

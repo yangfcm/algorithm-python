@@ -1,6 +1,6 @@
 '''
-Check if one string is a permutation of another. Solution: Create character maps for both str1 and str2 and compare them. 
-If each character has the same value(count of characters), they are permutation, otherwise, they are not.
+  Check if one string is a permutation of another. Solution: Create character maps for both str1 and str2 and compare them. 
+  If each character has the same value(count of characters), they are permutation, otherwise, they are not.
 '''
 def solution(str1, str2):
   strMap1 = {}

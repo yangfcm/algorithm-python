@@ -1,11 +1,12 @@
 '''
-Anagram: Check to see if two provided strings are anagrams of each other. 
-One string is an anagram of the other if it uses the same characters in the same quantity. 
-Requirements: only conside characters, not spaces or punctuation or number. 
-Conside capital letters to be the same as lower case 
-e.g. anagrams('rail safety', 'fairy tales') --> true 
- anagrams('RAIL! SAFETY!', 'fairy tales') --> true
- angagrams('Hi, there', 'Bye, there') --> false
+  Anagram: Check to see if two provided strings are anagrams of each other. 
+  One string is an anagram of the other if it uses the same characters in the same quantity. 
+  Requirements: only conside characters, not spaces or punctuation or number. 
+  Conside capital letters to be the same as lower case 
+  Example: 
+    anagrams('rail safety', 'fairy tales') --> true 
+    anagrams('RAIL! SAFETY!', 'fairy tales') --> true
+    angagrams('Hi, there', 'Bye, there') --> false
 '''
 def solution(str1, str2):
   letters = 'abcdefghijklmnopqrstuvwxyz'

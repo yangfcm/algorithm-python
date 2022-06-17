@@ -1,8 +1,8 @@
 '''
-Implement a method to perform basic string compression using the counts of repeated characters.
- e.g. aabcccccaaa -> a2b1c5a3.
- If the compressed string would not be smaller than the original string, should return original string.
- Assume the string has only uppercase and lowercase letters a-z.
+  Implement a method to perform basic string compression using the counts of repeated characters.
+  Example: aabcccccaaa -> a2b1c5a3.
+  If the compressed string would not be smaller than the original string, should return original string.
+  Assume the string has only uppercase and lowercase letters a-z.
 '''
 def solution(myStr):
   compressed = ''

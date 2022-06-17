@@ -1,13 +1,13 @@
 '''
- Implement a Queue data structure using two Stacks.
- Queue should implement the methods of add(), remove() and peek()
- Example:
-     const q = new QueueFromStack();
-     q.add(1);
-     q.add(2);
-     q.peek();  // returns 1
-     q.remove(); // returns 1
-     q.remove(); // returns 2
+  Implement a Queue data structure using two Stacks.
+  Queue should implement the methods of add(), remove() and peek()
+  Example:
+    const q = new QueueFromStack();
+    q.add(1);
+    q.add(2);
+    q.peek();  // returns 1
+    q.remove(); // returns 1
+    q.remove(); // returns 2
 '''
 from algo.ds.stack_queue.stack import Stack
 

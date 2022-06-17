@@ -1,5 +1,5 @@
 '''
-Remove duplicated node from a linked list
+  Remove duplicated node from a linked list
 '''
 from algo.ds.linked_list.linkedlist import LinkedList
 

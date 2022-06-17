@@ -1,8 +1,8 @@
 '''
-Given two strings, check if s2 is a rotation of s1 using only one call to isSubstring.
-If a string is a rotation of another, it's a rotation at a particular point.
-e.g. a rotation of "waterbottle" at character 3 means cutting this string at character 3 and 
-putting the right half('erbottle') before the left half('wat') so the result is "erbottlewat"
+  Given two strings, check if s2 is a rotation of s1 using only one call to isSubstring.
+  If a string is a rotation of another, it's a rotation at a particular point.
+  Example: a rotation of "waterbottle" at character 3 means cutting this string at character 3 and 
+  putting the right half('erbottle') before the left half('wat') so the result is "erbottlewat"
 '''
 
 def solution(str1, str2):

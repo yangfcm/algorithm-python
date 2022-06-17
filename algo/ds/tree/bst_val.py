@@ -1,5 +1,5 @@
 '''
- Given a node (binary tree), validate if it's a binary search tree.
+  Given a node (binary tree), validate if it's a binary search tree.
 '''
 def solution(node, min = None, max = None):
   if max != None and node.data > max:

@@ -1,6 +1,6 @@
 '''
-Return the number of vowels used in a string 
-e.g.!-- "apple" => 2 "why?" => 0
+  Return the number of vowels used in a string 
+  Example: "apple" => 2 "why?" => 0
 '''
 def solution(str):
   vowels = 'aeiouAEIOU'

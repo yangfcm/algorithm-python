@@ -3,11 +3,11 @@
   Quere is a data structure with elements First-In-First-Out
   Create a queue data structure and implement the methods 'add', 'remove', 'peek' etc.
   Example:
-  const q = Queue();
-  q.add(1);
-  q.add(2)
-  q.remove();  // return 1
-  q.remove(); // return 2
+    const q = Queue();
+    q.add(1);
+    q.add(2)
+    q.remove();  // return 1
+    q.remove(); // return 2
  '''
 class Queue:
   def __init__(self):

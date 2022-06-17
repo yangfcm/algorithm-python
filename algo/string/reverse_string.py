@@ -1,5 +1,5 @@
 '''
-Reverse a string
+  Reverse a string
 '''
 def solution(str):
   return str[::-1]

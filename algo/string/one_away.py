@@ -1,10 +1,11 @@
 '''
-There are three types of edits that can be performed on a string: 
-  insert a character, 
-  remove a character or 
-  replace a character. 
-Given two strings, check if they are one edit(or zero edit) away. 
-e.g. pale, ple -> true(remove a character) 
+  There are three types of edits that can be performed on a string: 
+    insert a character, 
+    remove a character or 
+    replace a character. 
+  Given two strings, check if they are one edit(or zero edit) away. 
+  Example: 
+    pale, ple -> true(remove a character) 
     pale, pales -> true(add a character) 
     pale, bale -> true(replace a character) 
     pale, bake -> false
