@@ -1,7 +1,3 @@
-'''
- Implement binary search
- Given a sorted array, search a given element val in the array
-'''
 def solution(arr, val):
   return searchHelper(arr, val, 0, len(arr))
 

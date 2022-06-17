@@ -1,6 +1,3 @@
-'''
-Implement counting sort.
-'''
 def solution(list):
   sorted = [0] * len(list)
   max = list[0]

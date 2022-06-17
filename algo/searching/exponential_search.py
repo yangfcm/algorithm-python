@@ -1,6 +1,3 @@
-'''
-Implement exponential search
-'''
 from algo.searching import binary_search 
 
 def solution(arr, val):
