@@ -15,4 +15,28 @@
   reverse('agfedcb') -> 'bcdefga', shuffle('agfedcb') -> 'abcdefg', 'bcdefgabcdefg' belongs to the merge of ('bcdefga','abcdefg')
 '''
 def solution(str):
-  pass
+  sortedS = ''.join(sorted(str))
+  letterCounts = {}
+  letterCountsShuffle = {}
+  for i, ch in enumerate(sortedS):
+    if i % 2 == 0:
+      letterCounts[ch] = letterCounts.get(ch, 0) + 1
+    else:
+      letterCountsShuffle[ch] = letterCountsShuffle.get(ch, 0) + 1
+  
+  reversedS = ''.join(reversed(str))
+  strArr = []
+
+  for l in reversedS:
+    if letterCounts[l] > 0:
+      while len(strArr) > 0 and strArr[-1] > l and letterCountsShuffle[strArr[-1]] > 0:
+        # Find out the smallest letter available
+        removed = strArr.pop()
+        letterCountsShuffle[removed] -= 1
+        letterCounts[removed] += 1
+      strArr.append(l)
+      letterCounts[l] -= 1
+    else:
+      letterCountsShuffle[l] -= 1
+  
+  return ''.join(strArr)
