@@ -65,3 +65,15 @@ For example:
 ```
 python -m pytest test/array/test_array_chunk.py
 ```
+
+- Run tests file under a folder:
+
+```
+python -m pytest <folder_name>
+```
+
+For example:
+
+```
+python -m pytest test/array
+```
