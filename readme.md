@@ -53,3 +53,15 @@ _For Windows 10 users_: You may experience the error: `Permission denied`. To so
 ```
 winpty python -m pytest
 ```
+
+- Run a particular test file:
+
+```
+python -m pytest <file_folder/file_name.py>
+```
+
+For example:
+
+```
+python -m pytest test/array/test_array_chunk.py
+```
