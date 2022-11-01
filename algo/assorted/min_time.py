@@ -23,7 +23,7 @@
 from math import ceil, floor
 
 
-def min_time(machines, goal):
+def solution(machines, goal):
   minDays = floor(goal * min(machines) / len(machines))
   maxDays = ceil(goal * max(machines) / len(machines))
   days = max(minDays, maxDays)
