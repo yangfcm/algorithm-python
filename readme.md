@@ -77,3 +77,9 @@ For example:
 ```
 python -m pytest test/array
 ```
+
+Run tests with watching code change
+
+```
+python -m pytest_watch -- --last-failed --new-first
+```
