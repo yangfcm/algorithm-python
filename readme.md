@@ -83,3 +83,19 @@ Run tests with watching code change
 ```
 python -m pytest_watch -- --last-failed --new-first
 ```
+
+## Run in Docker
+
+Under project directory:
+
+```
+docker compose watch
+```
+
+To view the test results, you can either use Docker desktop or run
+
+```
+docker logs <container-name> -f
+```
+
+Any changes made locally will trigger the re-run of test cases.
