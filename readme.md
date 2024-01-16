@@ -88,9 +88,21 @@ python -m pytest_watch -- --last-failed --new-first
 
 Under project directory:
 
+Run
+
+```
+docker compose up
+```
+
+to view tests result
+
+Or:
+
 ```
 docker compose watch
 ```
+
+to watch file changes with tests running.
 
 To view the test results, you can either use Docker desktop or run
 
